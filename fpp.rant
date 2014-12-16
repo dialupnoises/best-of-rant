@@ -95,5 +95,5 @@
     {
     	"i.imgur.com/"[r:5]{\w|\W}.jpg|
         *0.01*"redtube.com/"\5,D
-    }{|*0.1*\s{nsfw|[$nick] {check this out|look at this|here's my <noun>}}}[chance:0]| 
+    }{|*0.1*\s{nsfw|[$nick] {check this out|look at this|here's my <noun>}}}[chance:0]
 }
