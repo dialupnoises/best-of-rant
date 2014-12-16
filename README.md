@@ -1,4 +1,2 @@
-fppgen
-======
-
-A Rant pattern for generating typical FPP conversations
+#Best of Rant
+A collection of the best patterns.
