@@ -1,11 +1,15 @@
 # FPP Conversation Simulator
 
+# Block containing usernames of people in chat.
 [$[ppl]:{
     killowatt|Berkin|atlantique|CmdrMatthew|Cold|
     commie|cra0kalo|Dragon Robot|farm|Layla|
     rustlord420|Shoar|Swebonny|traffic|Vbitz|
     Handsome Matt|Tamschi|Spans|dajoh|krix|toaster|jos|*0.001*garry
 }]
+
+# Block containing nicknames used for users to refer to each other by.
+# These must be in EXACTLY the same order as the above block in order to work properly.
 [$[nick]:{
     killo|berk{|in}|atlantique|cmdr|cold|
     commie|cra0|derg{|bot}|farm|layla|
