@@ -30,6 +30,10 @@
 	``time=(time-1440+[num:0;{*8*1|*2*3|5|*0.01*[num:5;30]}])%1440+1440``
 ]
 
+[$[_insult]:{shit{face|ass}|shithead|asshole|{prick|ass|dick|fuck|pube}[chance:50][before:[chance:25]{\s}]{head|face|nose|hole|licker|kisser|tickler|eater}|dipshit|dumb{ass|fuck}|motherfucker|{jack|fat|dumb|smart}{|-}{ass|fuck}|{Dr.|Mr.|Sir|King|Prince|Uncle|Doctor|Professor|Madam|Little|Big} [x:_soc_insult_sync;deck][caps:word][$insult][caps:none]|{small|tiny|puny|micro}-{dick|cock}|{dick|cock|cum|jizz|piss|scat}{|\s|-}{sucker|licker|guzzler|lover|master|lord}|homo|{piece|chunk|pile} of {shit|poop}|douche{bag|nozzle|canoe}|{cunt|bitch}{|face}}]
+[$[insult]:[$_insult][xseed:_soc_insult_sync;\16,x]]
+[$[pet_name]:{dear{|est}|{swee|cu}tie{|\spie}|pumpkin|sweetheart|love{|r}|angel|boy toy|boo{|\sbear}|baby{|\s{girl|boy}}|babe|babe-o-tron|bubba|sugar|buttercup|sweetcheeks|bunny|kitty|doll{|face}|darling|gorgeous|hon{|ey}{|\s{lips|bunny|bee|muffin|plum|buns|pie}}|mistress|pussycat|scrumptious|puddin'|sexy|snookums|starfish|sunshine|temptress|tigress|sweetie}]
+
 [r:100][s:\n]
 [before:
 	``i=[ri]`` # Store the repeater index to make things a LOT simpler
@@ -78,8 +82,8 @@
     # Reaction or greeting
     [notfirst:{^|:v|ye|wow}[chance:0]][first:<greet>]|
     
-    # Insult someone
-    fu{c|}k{|ing} {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
+    # Fuck X
+    fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
     
     # X please
     [$nick] {plz|please}|
@@ -92,6 +96,15 @@
     
     # Ban X
     {ban|kill} [$nick] {please|ok}|
+    
+    # Why is X so Y
+    {why|y} is [$nick]{|'s <noun-body>} so <adj>|
+    
+    # Call someone a name
+    [$nick] you [$insult]|
+    
+    # Hit on someone
+    [$nick] you're my [$pet_name]|
     
     # Post a link
     [case:none]"http://"
