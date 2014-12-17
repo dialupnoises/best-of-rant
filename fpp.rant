@@ -91,7 +91,7 @@
     <x>|
     
     # Ban X
-    {{ban|kill} [$nick] {please|ok}|
+    {ban|kill} [$nick] {please|ok}|
     
     # Post a link
     [case:none]"http://"
