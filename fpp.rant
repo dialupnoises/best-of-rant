@@ -79,7 +79,7 @@
     [notfirst:{^|:v|ye|wow}[chance:0]][first:<greet>]|
     
     # Insult someone
-    fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
+    fu{c|}k{|ing} {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
     
     # X please
     [$nick] {plz|please}|
