@@ -5,7 +5,9 @@
     killowatt|Berkin|atlantique|CmdrMatthew|Cold|
     commie|cra0kalo|Dragon Robot|farm|Layla|
     rustlord420|Shoar|Swebonny|traffic|Vbitz|
-    Handsome Matt|Tamschi|Spans|dajoh|krix|toaster|jos|*0.001*garry
+    Handsome Matt|Tamschi|Spans|dajoh|krix|toaster|jos|
+    BrizzleBrip|
+    *0.001*garry
 }]
 
 # Block containing nicknames used for users to refer to each other by.
@@ -14,7 +16,9 @@
     killo|berk{|in}|atlantique|cmdr|cold|
     commie|cra0|derg{|bot}|farm|layla|
     rustlord|shoar|sweb|traffic|vbitz|
-    Matt|Tamschi|Spans|dajoh|krix|sbg|jos|*0.001*garry
+    Matt|Tamschi|Spans|dajoh|krix|sbg|jos|
+    brian|
+    *0.001*garry
 }]
 
 # Time shit
@@ -111,9 +115,17 @@
     [$nick] you're my [$pet_name]|
     
     # Post a link
+    [b:link_context`i`; # X is this you
+    	{{[$nick] is this you\s|*5*}|*0.1*}
+    ]
     [case:none]"http://"
     {
     	"i.imgur.com/"[r:5]{\w|\W}.jpg|
-        *0.01*"redtube.com/"\5,D
-    }{|*0.1*\s{nsfw|[$nick] {check this out|look at this|here's my <noun>}}}[chance:0]
+        *0.01*"redtube.com/"\5,D|
+        <noun?!//[^a-z]//i>".jpg.to"
+    }
+    [b:link_context`i`;
+    	{|*0.1*\s{<x>|nsfw|{[$nick]|guys|<x>} {check this out|look at this|here's my <noun>}}}
+    ]
+    [chance:0]
 }
