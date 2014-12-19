@@ -127,6 +127,9 @@
     *0.5*
     am I the only one who {knows how to <verb>|is <adj>|<verb.s-transitive> <noun.plural>|likes <noun.plural>|can <adv> <verb>}{|\s{in here|around here|in the world}}|
     
+    # I'm watching X right now
+    {<greet>|guys|guess what|wow} I'm watching {\a {<noun> video|video of \a <noun-person> <verb.ing-transitive> \a {<adj>\s|}<noun-animal>}|<noun-!person> porn|{films|movies} about <adj> <abstract.plural-concept>|a documentary about {<verb.noun>|<noun>-<verb.ing-transitive>}}\s{atm|right now|currently|at the moment|and <verb.ing-intransitive>}|
+    
     # Story A
     *0.1*
     <timeadv-time> I {went to|was at} {the|\a|my} <place> and {this <noun-person|animal> {<verb.ed-violent-transitive> me|<verb.ed-walk> up to me <verb.ing-intransitive>}|<verb.ed-transitive> a <noun>} and now my <noun-body> {tastes|smells|looks|feels} like \a {<verb.pp-transitive>|<adj-appearance>} <noun>{|\s{help|ugh|wow|<x>|:(}}|
