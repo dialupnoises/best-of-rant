@@ -87,7 +87,7 @@
     <verb-transitive> my <noun-body>|
     
     # Reaction or greeting
-    [notfirst:{^|:v|ye|wow|epic|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot|:C|:(|;)|[$le]|:shelterfrog:}[chance:0]][first:<greet>]|
+    [notfirst:{^|:v|ye|wow|epic|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot|:C|:(|;)|[$le]|:shelterfrog:|rip|RIP}[chance:0]][first:<greet>]|
     
     # Fuck X
     fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
