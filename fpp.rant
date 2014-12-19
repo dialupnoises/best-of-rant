@@ -88,7 +88,7 @@
     <verb-transitive> my <noun-body>|
     
     # Reaction or greeting
-    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8}[chance:0]][first:<greet>]|
+    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot}[chance:0]][first:<greet>]|
     
     # Fuck X
     fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
@@ -106,7 +106,12 @@
     {ban|kill} [$nick] {please|ok}|
     
     # Why is X so Y
-    {why|y} is [$nick]{|'s <noun-body>} so <adj>|
+    {why|y} [b:whyme`i`;{is [$nick]{|'s <noun-body>}|is my <noun-body>|am I} so <adj>]
+    	# Response?
+        [b:whyme`i`]{[merge]|*2*\n[merge]
+        [$h_msg:[$ppl]]{[b:author`i`;[$nick]:\s]|}because you're \a {<adj>\s|}<noun>
+        }
+    |
     
     # Call someone a name
     [$nick] you [$insult]|
@@ -119,7 +124,7 @@
         
     # Story A
     *0.1*
-    <timeadv-time> I {went to|was at} {the|\a|my} <place> and {this <noun-person|animal> {<verb.ed-violent-transitive> me|<verb.ed-walk> up to me <verb.ing-intransitive>}|<verb.ed-transitive> a <noun>} and now my <noun-body> {tastes|smells|looks|feels} like a <verb.pp-transitive> <noun>{|\s{help|ugh|wow|<x>|:(}}|
+    <timeadv-time> I {went to|was at} {the|\a|my} <place> and {this <noun-person|animal> {<verb.ed-violent-transitive> me|<verb.ed-walk> up to me <verb.ing-intransitive>}|<verb.ed-transitive> a <noun>} and now my <noun-body> {tastes|smells|looks|feels} like \a {<verb.pp-transitive>|<adj-appearance>} <noun>{|\s{help|ugh|wow|<x>|:(}}|
     
     # Post a link
     *0.5*
