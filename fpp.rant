@@ -88,7 +88,7 @@
     <verb-transitive> my <noun-body>|
     
     # Reaction or greeting
-    [notfirst:{^|:v|ye|wow}[chance:0]][first:<greet>]|
+    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8}[chance:0]][first:<greet>]|
     
     # Fuck X
     fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
@@ -114,7 +114,15 @@
     # Hit on someone
     [$nick] you're my [$pet_name]|
     
+    # Fact about some noun
+    <noun.plural> are {<adj>|great|gr8|bad}{|\s{[$nick]|ok|k|*0.2*for your <noun-body>}}|
+        
+    # Story A
+    *0.1*
+    <timeadv-time> I {went to|was at} {the|\a|my} <place> and {this <noun-person|animal> {<verb.ed-violent-transitive> me|<verb.ed-walk> up to me <verb.ing-intransitive>}|<verb.ed-transitive> a <noun>} and now my <noun-body> {tastes|smells|looks|feels} like a <verb.pp-transitive> <noun>{|\s{help|ugh|wow|<x>|:(}}|
+    
     # Post a link
+    *0.5*
     [b:link_context`i`; # X is this you
     	{{[$nick] is this you\s|*5*}|*0.1*}
     ]
