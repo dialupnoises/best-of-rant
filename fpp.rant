@@ -41,6 +41,7 @@
 [$[_insult]:{shit{face|ass}|shithead|asshole|{prick|ass|dick|fuck|pube}[chance:50][before:[chance:25]{\s}]{head|face|nose|hole|licker|kisser|tickler|eater}|dipshit|dumb{ass|fuck}|motherfucker|{jack|fat|dumb|smart}{|-}{ass|fuck}|{Dr.|Mr.|Sir|King|Prince|Uncle|Doctor|Professor|Madam|Little|Big} [x:_soc_insult_sync;deck][caps:word][$insult][caps:none]|{small|tiny|puny|micro}-{dick|cock}|{dick|cock|cum|jizz|piss|scat}{|\s|-}{sucker|licker|guzzler|lover|master|lord}|homo|{piece|chunk|pile} of {shit|poop}|douche{bag|nozzle|canoe}|{cunt|bitch}{|face}}]
 [$[insult]:[$_insult][xseed:_soc_insult_sync;\16,x]]
 [$[pet_name]:{dear{|est}|{swee|cu}tie{|\spie}|pumpkin|sweetheart|love{|r}|angel|boy toy|boo{|\sbear}|baby{|\s{girl|boy}}|babe|babe-o-tron|bubba|sugar|buttercup|sweetcheeks|bunny|kitty|doll{|face}|darling|gorgeous|hon{|ey}{|\s{lips|bunny|bee|muffin|plum|buns|pie}}|mistress|pussycat|scrumptious|puddin'|sexy|snookums|starfish|sunshine|temptress|tigress|sweetie}]
+[$[le]:( ͡° ͜ʖ ͡°)]
 
 [r:100][s:\n]
 [before:
@@ -52,7 +53,7 @@
     # Randomize capitalization of message
     [case:{*8*none|upper|first}]
 ]
-[after:{*3*|[r:[n:1;3]]{!}}] # Randomize ending punctuation
+[after:{*3*|[r:[n:1;3]]{!}|*0.05*\s[$le]}] # Randomize ending punctuation
 
 # Message body
 {
@@ -88,7 +89,7 @@
     <verb-transitive> my <noun-body>|
     
     # Reaction or greeting
-    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot}[chance:0]][first:<greet>]|
+    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot|:C|:(|;)|[$le]}[chance:0]][first:<greet>]|
     
     # Fuck X
     fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
@@ -117,11 +118,15 @@
     [$nick] you [$insult]|
     
     # Hit on someone
-    [$nick] you're my [$pet_name]|
+    [$nick] you're my [$pet_name]{*5*|\s[$le]}|
     
     # Fact about some noun
     <noun.plural> are {<adj>|great|gr8|bad}{|\s{[$nick]|ok|k|*0.2*for your <noun-body>}}|
         
+    # Am I the only one who...?
+    *0.5*
+    am I the only one who {knows how to <verb>|is <adj>|<verb.s-transitive> <noun.plural>|likes <noun.plural>|can <adv> <verb>}{|\s{in here|around here|in the world}}|
+    
     # Story A
     *0.1*
     <timeadv-time> I {went to|was at} {the|\a|my} <place> and {this <noun-person|animal> {<verb.ed-violent-transitive> me|<verb.ed-walk> up to me <verb.ing-intransitive>}|<verb.ed-transitive> a <noun>} and now my <noun-body> {tastes|smells|looks|feels} like \a {<verb.pp-transitive>|<adj-appearance>} <noun>{|\s{help|ugh|wow|<x>|:(}}|
