@@ -38,10 +38,10 @@
 	``time=(time-1440+[num:0;{*8*1|*2*3|5|*0.01*[num:5;30]}])%1440+1440``
 ]
 
-[$[_insult]:{shit{face|ass}|shithead|asshole|{prick|ass|dick|fuck|pube}[chance:50][before:[chance:25]{\s}]{head|face|nose|hole|licker|kisser|tickler|eater}|dipshit|dumb{ass|fuck}|motherfucker|{jack|fat|dumb|smart}{|-}{ass|fuck}|{Dr.|Mr.|Sir|King|Prince|Uncle|Doctor|Professor|Madam|Little|Big} [x:_soc_insult_sync;deck][caps:word][$insult][caps:none]|{small|tiny|puny|micro}-{dick|cock}|{dick|cock|cum|jizz|piss|scat}{|\s|-}{sucker|licker|guzzler|lover|master|lord}|homo|{piece|chunk|pile} of {shit|poop}|douche{bag|nozzle|canoe}|{cunt|bitch}{|face}}]
-[$[insult]:[$_insult][xseed:_soc_insult_sync;\16,x]]
-[$[pet_name]:{dear{|est}|{swee|cu}tie{|\spie}|pumpkin|sweetheart|love{|r}|angel|boy toy|boo{|\sbear}|baby{|\s{girl|boy}}|babe|babe-o-tron|bubba|sugar|buttercup|sweetcheeks|bunny|kitty|doll{|face}|darling|gorgeous|hon{|ey}{|\s{lips|bunny|bee|muffin|plum|buns|pie}}|mistress|pussycat|scrumptious|puddin'|sexy|snookums|starfish|sunshine|temptress|tigress|sweetie}]
-[$[le]:( ͡° ͜ʖ ͡°)]
+[$[insult]:{shit{face|ass}|shithead|asshole|{prick|ass|dick|fuck|pube}[chance:50][before:[chance:25]{\s}]{head|face|nose|hole|licker|kisser|tickler|eater}|dipshit|dumb{ass|fuck}|motherfucker|{jack|fat|dumb|smart}{|-}{ass|fuck}|{Dr.|Mr.|Sir|King|Prince|Uncle|Doctor|Professor|Madam|Little|Big} [x:_soc_insult_sync;deck][caps:word][$insult][xseed:_soc_insult_sync;\16,x][caps:none]|{small|tiny|puny|micro}-{dick|cock}|{dick|cock|cum|jizz|piss|scat}{|\s|-}{sucker|licker|guzzler|lover|master|lord}|homo|{piece|chunk|pile} of {shit|poop}|douche{bag|nozzle|canoe}|{cunt|bitch}{|face}}]
+[$[pet_name]:{dear{|est}|{swee|cu}tie{|\spie}|pumpkin|sweetheart|love{|r}|angel|boy toy|boo{|\sbear}|baby{|\s{girl|boy}}|babe|babe-o-tron|bubba|sugar|buttercup|sweetcheeks|bunny|kitty|doll{|face}|darling|gorgeous|hon{|ey}{|\s{lips|bunny|bee|muffin|plum|buns|pie}}|mistress|pussycat|scrumptious|puddin'|sexy|snookums|starfish|sunshine|temptress|tigress|{sweet|poops}ie}]
+[$[le]:( \u0361\u00b0 \u035c\u0296 \u0361\u00b0)]
+[$[lang]:{C\#|mond|c++|lua|rant|jet|php|java|*0.1*haskell}]
 
 [r:100][s:\n]
 [before:
@@ -58,9 +58,7 @@
 # Message body
 {
     # Talk shit about/shamelessly praise a language
-    [b:lang`i`;{use\s|}]
-    {C\#|mond|c++|lua|rant|jet|php|java|*0.1*haskell}
-    [b:lang`i`;{|\s{best|worst|sucks}}]|
+    {use [$lang]|[$lang] {best|worst|sucks}}|
     
     # "X me"
     [b:do_me_what`i`;<verb-transitive>] me
@@ -89,7 +87,7 @@
     <verb-transitive> my <noun-body>|
     
     # Reaction or greeting
-    [notfirst:{^|:v|ye|wow|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot|:C|:(|;)|[$le]}[chance:0]][first:<greet>]|
+    [notfirst:{^|:v|ye|wow|epic|what|{u|}wot|gr8|{|that{s|'s|\sis}} hot|:C|:(|;)|[$le]|:shelterfrog:}[chance:0]][first:<greet>]|
     
     # Fuck X
     fu{c|}k {you|me|{{you|off}\s|}[$nick]|<noun.plural>}|
