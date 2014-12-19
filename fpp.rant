@@ -57,7 +57,7 @@
 
 # Message body
 {
-	# Talk shit about/shamelessly praise a language
+    # Talk shit about/shamelessly praise a language
     [b:lang`i`;{use\s|}]
     {C\#|mond|c++|lua|rant|jet|php|java|*0.1*haskell}
     [b:lang`i`;{|\s{best|worst|sucks}}]|
