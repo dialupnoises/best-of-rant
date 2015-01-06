@@ -1,0 +1,68 @@
+# BITCOIN HEADLINE GENERATOR
+
+# BitHot Wings -> BitHotWings
+[$[screw_spaces:text]: 
+	[//\s//: [arg:text]; ]
+]
+[numfmt: group-commas]
+[case:title]
+{
+	`a = [n: 10; 200];`
+	Bitcoin Exchange {
+    	{Bi|M}t[case:word;[$screw_spaces:<noun>]]|
+        BTC-[char: A-Z]|
+        [case:word;[$screw_spaces:<noun>]]BTC
+    } loses `a * 1000` BTC in\s
+    {
+    	hack|
+        theft|
+        cold wallet leak|
+        crash|
+        {site|bitcoin} {vulnerability|exploit}
+    }.
+    |
+    <country::=A> {
+    	bans Bitcoin.|
+        introduces Bitcoin regulation.|
+        {says|claims|rules} [q:{
+			Bitcoin is {|not\s}a currency. |
+            Bitcoin is a{\smoney-like|} commodity. |
+            Bitcoin is {|too\s}{risky|dangerous|vulnerable|volatile}.
+        }]
+    }
+    |
+    You should{n't|\s{immediately|absolutely|definitely}} invest in Bitcoin.
+    |
+    Bitcoin can be used to buy <noun-drug>, other drugs.
+    |
+    Researchers discover that Bitcoin is not as {<adj>|anonymous|good} as previously thought.
+    |
+    Bitcoin Miner Manufacturer {
+    	[$screw_spaces:<noun-animal>]{\sLabs|Miner} |
+    	Coin{Killo|Megga|Gigga|Terra|Petta|Exxa|Zetta|Yottta} |
+    	Bit[case:first;<emo>] |
+    	\Wn\WMiner
+    }\s
+    {
+    	releases a new [n: 25; 4000] GH/s ASIC for only $`[n: 1; 80] * 100 - 1`! |
+    	declares bankruptcy. |
+    	is shutdown by {FTC|FBI|DEA|CIA|NSA}. |
+    	runs off with customers' money.
+    }
+    |
+    `a = [n: 200; 1300];`
+    Bitcoin price at $`a`. [cmp: `a`; 325; 
+    	[is: less; {
+    		HODL!|
+    		Bitcoiners {
+    			commit suicide |
+    			sell <noun.plural::!B>, <noun.plural::!B>
+    		}.
+    	}]
+    	[is: equal greater; {
+    		Next stop: {wall street|the government|world reserve currency|the moon}! |
+    		Can it go higher? |
+    		Why the next stop is $[n: 10; 1000].
+    	}]
+    ]
+} [chance: 30]{Is this good for Bitcoin?}
